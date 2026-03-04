@@ -1,0 +1,137 @@
+[
+  {
+    "id": "1001",
+    "title": "Cannot access the dashboard",
+    "description": "Getting a 404 error when trying to load the main dashboard after login.",
+    "customer": "Anisur Rahman",
+    "priority": "HIGH PRIORITY",
+    "status": "Open",
+    "createdAt": "01 Mar 2026"
+  },
+  {
+    "id": "1002",
+    "title": "Payment failed but amount",
+    "description": "I tried to upgrade my plan, the payment failed but money was deducted from my card.",
+    "customer": "John Doe",
+    "priority": "HIGH PRIORITY",
+    "status": "Open",
+    "createdAt": "01 Mar 2026"
+  },
+  {
+    "id": "1003",
+    "title": "How to change account email?",
+    "description": "I need help changing the primary email address associated with my account.",
+    "customer": "Sarah Smith",
+    "priority": "LOW PRIORITY",
+    "status": "Open",
+    "createdAt": "02 Mar 2026"
+  },
+  {
+    "id": "1004",
+    "title": "Mobile app keeps crashing",
+    "description": "The Android app crashes immediately after I tap on the 'Settings' icon.",
+    "customer": "Mehedi Hasan",
+    "priority": "HIGH PRIORITY",
+    "status": "Open",
+    "createdAt": "02 Mar 2026"
+  },
+  {
+    "id": "1005",
+    "title": "Request for invoice copy",
+    "description": "Please send me the invoice copy for the last month's subscription.",
+    "customer": "Michael Johnson",
+    "priority": "LOW PRIORITY",
+    "status": "Open",
+    "createdAt": "02 Mar 2026"
+  },
+  {
+    "id": "1006",
+    "title": "Unable to upload profile picture",
+    "description": "Whenever I try to upload a JPEG file, it says 'format not supported'.",
+    "customer": "Fatima Begum",
+    "priority": "MEDIUM PRIORITY",
+    "status": "Open",
+    "createdAt": "02 Mar 2026"
+  },
+  {
+    "id": "1007",
+    "title": "API rate limit exceeded too quickly",
+    "description": "We are hitting the API rate limit even though we are sending fewer requests than allowed.",
+    "customer": "TechCorp Inc.",
+    "priority": "HIGH PRIORITY",
+    "status": "Open",
+    "createdAt": "03 Mar 2026"
+  },
+  {
+    "id": "1008",
+    "title": "Feature request: Dark Mode",
+    "description": "It would be great if you could add a dark mode toggle to the dashboard.",
+    "customer": "David Wilson",
+    "priority": "LOW PRIORITY",
+    "status": "Open",
+    "createdAt": "03 Mar 2026"
+  },
+  {
+    "id": "1009",
+    "title": "Account suspended by mistake",
+    "description": "My account was suspended automatically. I believe this is a mistake.",
+    "customer": "Rakib Hossain",
+    "priority": "HIGH PRIORITY",
+    "status": "Open",
+    "createdAt": "03 Mar 2026"
+  },
+  {
+    "id": "1010",
+    "title": "Data export is taking too long",
+    "description": "Trying to export my customer list to CSV, but it's stuck at 99%. as soon as I click ",
+    "customer": "Emma Davis",
+    "priority": "MEDIUM PRIORITY",
+    "status": "Open",
+    "createdAt": "03 Mar 2026"
+  },
+  {
+    "id": "1011",
+    "title": "Wrong billing address on receipt",
+    "description": "The receipt shows my old company address. Please update it. as soon as I click ",
+    "customer": "James Brown",
+    "priority": "MEDIUM PRIORITY",
+    "status": "Open",
+    "createdAt": "03 Mar 2026"
+  },
+  {
+    "id": "1012",
+    "title": "Password reset link expired",
+    "description": "The password reset email arrives, but the link says 'expired' as soon as I click it.",
+    "customer": "Nusrat Jahan",
+    "priority": "HIGH PRIORITY",
+    "status": "Open",
+    "createdAt": "04 Mar 2026"
+  },
+  {
+    "id": "1013",
+    "title": "Two-factor authentication not",
+    "description": "I am trying to log in but not receiving the 2FA SMS code on my phone.",
+    "customer": "William Taylor",
+    "priority": "HIGH PRIORITY",
+    "status": "Open",
+    "createdAt": "04 Mar 2026"
+  },
+  {
+    "id": "1014",
+    "title": "Integration with Slack is failing",
+    "description": "Cannot connect the Slack app to my workspace. It throws an OAuth error.",
+    "customer": "StartUp Hub",
+    "priority": "MEDIUM PRIORITY",
+    "status": "Open",
+    "createdAt": "04 Mar 2026"
+  },
+  {
+    "id": "1015",
+    "title": "Typo in the welcoming email",
+    "description": "There is a spelling mistake in the welcome email sent to new users.",
+    "customer": "Olivia Martinez",
+    "priority": "LOW PRIORITY",
+    "status": "Open",
+    "createdAt": "04 Mar 2026"
+  }
+]

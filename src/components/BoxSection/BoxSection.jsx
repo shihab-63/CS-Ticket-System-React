@@ -2,7 +2,7 @@ import React from "react";
 import Container from "../Container/Container";
 import vector1 from "../../assets/vector1.png";
 
-const CardSection = () => {
+const BoxSection = () => {
   return (
     <>
       <Container>
@@ -13,15 +13,17 @@ const CardSection = () => {
               style={{
                 background: `url(${vector1})`,
                 backgroundRepeat: "no-repeat",
+                backgroundPosition: "contain",
               }}
-              className="absolute inset-0 bg-contain pointer-events-none"
+              className="absolute opacity-70 inset-0 pointer-events-none"
             ></div>
             <div
               style={{
                 background: `url(${vector1})`,
                 backgroundRepeat: "no-repeat",
+                backgroundPosition: "contain",
               }}
-              className="absolute inset-0 bg-contain bg-left rotate-y-180 pointer-events-none"
+              className="absolute opacity-70 inset-0 bg-left rotate-y-180 pointer-events-none"
             ></div>
             <h2 className="text-xl md:text-2xl text-white mb-3">In-Progress</h2>
             <p className="text-4xl md:text-6xl text-white">0</p>
@@ -33,15 +35,17 @@ const CardSection = () => {
               style={{
                 background: `url(${vector1})`,
                 backgroundRepeat: "no-repeat",
+                backgroundPosition: "contain",
               }}
-              className="absolute inset-0 bg-contain pointer-events-none"
+              className="absolute opacity-70 inset-0 bg-contain pointer-events-none"
             ></div>
             <div
               style={{
                 background: `url(${vector1})`,
                 backgroundRepeat: "no-repeat",
+                backgroundPosition: "contain",
               }}
-              className="absolute inset-0 bg-contain bg-left rotate-y-180 pointer-events-none"
+              className="absolute inset-0 opacity-70 bg-contain bg-left rotate-y-180 pointer-events-none"
             ></div>
             <h2 className="text-xl md:text-2xl mb-3 text-white">Resolved</h2>
             <p className="text-4xl md:text-6xl text-white">0</p>
@@ -52,4 +56,4 @@ const CardSection = () => {
   );
 };
 
-export default CardSection;
+export default BoxSection;
