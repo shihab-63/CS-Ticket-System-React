@@ -3,6 +3,7 @@ import "./App.css";
 import BoxSection from "./components/BoxSection/BoxSection";
 import Navbar from "./components/Navbar/Navbar";
 import TicketDashboard from "./components/TicketDashboard/TicketDashboard";
+import Footer from "./Footer/Footer";
 
 // Ticket Data
 const fatchTickets = async () => {
@@ -25,6 +26,7 @@ function App() {
       >
         <TicketDashboard ticketsPromise={ticketsPromise} />
       </Suspense>
+      <Footer />
     </div>
   );
 }
