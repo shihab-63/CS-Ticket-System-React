@@ -70,7 +70,7 @@ const Footer = () => {
                   <span
                     className="transition-colors duration-500 
                     group-hover:text-transparent group-hover:bg-clip-text 
-                    group-hover:bg-gradient-to-r group-hover:from-purple-500 group-hover:to-pink-500"
+                    group-hover:bg-linear-to-r group-hover:from-purple-500 group-hover:to-pink-500"
                   >
                     @CS — Ticket System
                   </span>
@@ -80,7 +80,7 @@ const Footer = () => {
                   <span
                     className="transition-colors duration-500 
                     group-hover:text-transparent group-hover:bg-clip-text 
-                    group-hover:bg-gradient-to-r group-hover:from-purple-500 group-hover:to-pink-500"
+                    group-hover:bg-linear-to-r group-hover:from-purple-500 group-hover:to-pink-500"
                   >
                     @CS — Ticket System
                   </span>
@@ -90,7 +90,7 @@ const Footer = () => {
                   <span
                     className="transition-colors duration-500 
                     group-hover:text-transparent group-hover:bg-clip-text 
-                    group-hover:bg-gradient-to-r group-hover:from-purple-500 group-hover:to-pink-500"
+                    group-hover:bg-linear-to-r group-hover:from-purple-500 group-hover:to-pink-500"
                   >
                     @CS — Ticket System
                   </span>
@@ -100,7 +100,7 @@ const Footer = () => {
                   <span
                     className="transition-colors duration-500 
                     group-hover:text-transparent group-hover:bg-clip-text 
-                    group-hover:bg-gradient-to-r group-hover:from-purple-500 group-hover:to-pink-500"
+                    group-hover:bg-linear-to-r group-hover:from-purple-500 group-hover:to-pink-500"
                   >
                     support@cst.com
                   </span>
