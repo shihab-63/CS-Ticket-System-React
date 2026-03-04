@@ -124,14 +124,5 @@
     "priority": "MEDIUM PRIORITY",
     "status": "Open",
     "createdAt": "04 Mar 2026"
-  },
-  {
-    "id": "1015",
-    "title": "Typo in the welcoming email",
-    "description": "There is a spelling mistake in the welcome email sent to new users.",
-    "customer": "Olivia Martinez",
-    "priority": "LOW PRIORITY",
-    "status": "Open",
-    "createdAt": "04 Mar 2026"
   }
 ]
