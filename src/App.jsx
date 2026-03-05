@@ -26,7 +26,7 @@ function App() {
         <TicketDashboard ticketsPromise={ticketsPromise} />
       </Suspense>
       <Footer />
-      <ToastContainer />
+      <ToastContainer position="top-center" />
     </div>
   );
 }

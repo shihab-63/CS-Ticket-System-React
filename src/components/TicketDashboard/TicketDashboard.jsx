@@ -11,6 +11,7 @@ const TicketDashboard = ({ ticketsPromise }) => {
   const [ticketsData, setTicketsData] = useState(initialTickets);
 
   const [cardItems, setCardItems] = useState([]);
+  const [taskItems, setTaskItems] = useState([]);
 
   // Handle Lifting
   const handleLifting = (clickedCard) => {
@@ -34,11 +35,21 @@ const TicketDashboard = ({ ticketsPromise }) => {
     });
 
     setTicketsData(updatedTicketsData);
+    toast.success(`${clickedCard.title} Added`);
+  };
+
+  // Ready to Reselved
+  const handleResolved = (clickedCard) => {
+    const newCard = [...taskItems, clickedCard];
+    setTaskItems(newCard);
+
+    const remaining = cardItems.filter((item) => item.id !== clickedCard.id);
+    setCardItems(remaining);
   };
 
   return (
     <div>
-      <BoxSection status={cardItems} />
+      <BoxSection taskItems={taskItems} status={cardItems} />
       <Container>
         <div className="grid grid-cols-1 md:grid-cols-12 gap-7">
           <div className="order-2 md:order-1 md:col-span-9">
@@ -56,8 +67,12 @@ const TicketDashboard = ({ ticketsPromise }) => {
             </div>
           </div>
           <div className="order-1 mx-3 md:mx-0 md:order-1 col-span-1 md:col-span-3 h-fit">
-            <TaskStatus status={cardItems} setStatus={setCardItems} />
-            <ResolvedTask />
+            <TaskStatus
+              handleResolved={handleResolved}
+              status={cardItems}
+              setStatus={setCardItems}
+            />
+            <ResolvedTask taskItems={taskItems} />
           </div>
         </div>
       </Container>

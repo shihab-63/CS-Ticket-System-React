@@ -2,7 +2,7 @@ import React from "react";
 import Container from "../Container/Container";
 import vector1 from "../../assets/vector1.png";
 
-const BoxSection = ({status}) => {
+const BoxSection = ({ status, taskItems }) => {
   return (
     <>
       <Container>
@@ -48,7 +48,7 @@ const BoxSection = ({status}) => {
               className="absolute inset-0 opacity-70 bg-contain bg-left rotate-y-180 pointer-events-none"
             ></div>
             <h2 className="text-xl md:text-2xl mb-3 text-white">Resolved</h2>
-            <p className="text-4xl md:text-6xl text-white">0</p>
+            <p className="text-4xl md:text-6xl text-white">{taskItems.length}</p>
           </div>
         </div>
       </Container>
