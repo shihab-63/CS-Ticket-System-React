@@ -13,12 +13,14 @@ const Ticket = ({ ticket }) => {
       return `text-green-600`;
     }
   };
+
   return (
     <div className="">
       <div className="bg-white cursor-pointer hover:-translate-y-1 transition-all duration-300 hover:shadow-xl p-4 rounded-xl">
         {/* Title, Status */}
         <div className="flex justify-between items-center">
           <h1 className=" md:text-xl font-bold md:font-semibold">{title}</h1>
+
           <div className="flex bg-[#B9F8CF] py-1 px-3 rounded-2xl items-center gap-1">
             <p className="w-4 h-4 bg-[#02A53B] rounded-full"></p>
             <p className="font-semibold">{status}</p>
