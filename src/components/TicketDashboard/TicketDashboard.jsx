@@ -7,28 +7,40 @@ import BoxSection from "../BoxSection/BoxSection";
 import { toast } from "react-toastify";
 
 const TicketDashboard = ({ ticketsPromise }) => {
-  const ticketsData = use(ticketsPromise);
+  const initialTickets = use(ticketsPromise);
+  const [ticketsData, setTicketsData] = useState(initialTickets);
+
+  const [cardItems, setCardItems] = useState([]);
 
   // Handle Lifting
-  const [cardItems, setCardItems] = useState([]);
-  const handleLifting = (cards) => {
-    const cardHere = cardItems.find((item) => item.id === cards.id);
-    if(cardHere) {
-      return toast.warning("Payment Failed - Card Declined is now In-Progress.")
+  const handleLifting = (clickedCard) => {
+    const isExist = cardItems.find((item) => item.id === clickedCard.id);
+    if (isExist) {
+      return toast.warning(`${clickedCard.title} is already In-Progress.`);
     }
-    const newCards = [...cardItems, cards];
-    setCardItems(newCards);
+
+    const updatedCardForRightSide = {
+      ...clickedCard,
+      status: "In-Progress",
+      statusChangedAt: new Date(),
+    };
+    setCardItems([...cardItems, updatedCardForRightSide]);
+
+    const updatedTicketsData = ticketsData.map((ticket) => {
+      if (ticket.id === clickedCard.id) {
+        return { ...ticket, status: "In-Progress" };
+      }
+      return ticket;
+    });
+
+    setTicketsData(updatedTicketsData);
   };
 
   return (
     <div>
-      {/* Box Container */}
       <BoxSection status={cardItems} />
-
-      {/* Main Container */}
       <Container>
         <div className="grid grid-cols-1 md:grid-cols-12 gap-7">
-          {/* Left Side Ticket */}
           <div className="order-2 md:order-1 md:col-span-9">
             <h1 className="mx-3 md:mx-0 text-2xl font-bold">
               Customer Tickets
@@ -43,7 +55,6 @@ const TicketDashboard = ({ ticketsPromise }) => {
               ))}
             </div>
           </div>
-          {/* Right Side Task */}
           <div className="order-1 mx-3 md:mx-0 md:order-1 col-span-1 md:col-span-3 h-fit">
             <TaskStatus status={cardItems} setStatus={setCardItems} />
             <ResolvedTask />
