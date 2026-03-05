@@ -1,6 +1,6 @@
 import React from "react";
 
-const ResolvedTask = ({ taskItems }) => {
+const ResolvedTask = ({ taskItems, handleRemoveResolved }) => {
   return (
     <>
       <div className="bg-gray-200 border-gray-400/10 border border-dashed mt-12 p-3 rounded-2xl">
@@ -21,7 +21,10 @@ const ResolvedTask = ({ taskItems }) => {
               className="bg-[#FAF6C9] rounded-xl mt-3 py-5 px-3 w-full"
             >
               <h1 className="text-xl font-semibold">{card.title}</h1>
-              <button className="bg-[#02A53B] w-full mt-5 py-1 rounded-lg active:scale-95 transition-all px-2 text-lg text-white cursor-pointer text-center">
+              <button
+                onClick={() => handleRemoveResolved(card.id)}
+                className="bg-[#02A53B] w-full mt-5 py-1 rounded-lg active:scale-95 transition-all px-2 text-lg text-white cursor-pointer text-center"
+              >
                 Click To Removed
               </button>
             </div>

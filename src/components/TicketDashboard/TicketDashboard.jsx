@@ -53,6 +53,12 @@ const TicketDashboard = ({ ticketsPromise }) => {
     setTicketsData(remainingTickes);
   };
 
+  const handleRemoveResolved = (id) => {
+    const remainingTasks = taskItems.filter((task) => task.id !== id);
+    setTaskItems(remainingTasks);
+    toast.error("Task Removed!");
+  };
+
   return (
     <div>
       <BoxSection taskItems={taskItems} status={cardItems} />
@@ -78,7 +84,7 @@ const TicketDashboard = ({ ticketsPromise }) => {
               status={cardItems}
               setStatus={setCardItems}
             />
-            <ResolvedTask taskItems={taskItems} />
+            <ResolvedTask handleRemoveResolved={handleRemoveResolved} taskItems={taskItems} />
           </div>
         </div>
       </Container>
