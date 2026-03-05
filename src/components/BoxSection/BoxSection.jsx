@@ -2,7 +2,7 @@ import React from "react";
 import Container from "../Container/Container";
 import vector1 from "../../assets/vector1.png";
 
-const BoxSection = () => {
+const BoxSection = ({status}) => {
   return (
     <>
       <Container>
@@ -26,7 +26,7 @@ const BoxSection = () => {
               className="absolute opacity-70 inset-0 bg-left rotate-y-180 pointer-events-none"
             ></div>
             <h2 className="text-xl md:text-2xl text-white mb-3">In-Progress</h2>
-            <p className="text-4xl md:text-6xl text-white">0</p>
+            <p className="text-4xl md:text-6xl text-white">{status.length}</p>
           </div>
 
           {/* Card 2 */}

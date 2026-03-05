@@ -1,9 +1,9 @@
 import { Suspense } from "react";
 import "./App.css";
-import BoxSection from "./components/BoxSection/BoxSection";
 import Navbar from "./components/Navbar/Navbar";
 import TicketDashboard from "./components/TicketDashboard/TicketDashboard";
 import Footer from "./Footer/Footer";
+import { ToastContainer } from "react-toastify";
 
 // Ticket Data
 const fatchTickets = async () => {
@@ -16,7 +16,6 @@ function App() {
   return (
     <div className="bg-[#F5F5F5] min-h-screen w-full">
       <Navbar />
-      <BoxSection />
       <Suspense
         fallback={
           <div className="flex my-80 justify-center items-center mt-8">
@@ -27,6 +26,7 @@ function App() {
         <TicketDashboard ticketsPromise={ticketsPromise} />
       </Suspense>
       <Footer />
+      <ToastContainer />
     </div>
   );
 }

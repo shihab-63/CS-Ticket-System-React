@@ -1,7 +1,7 @@
 import React from "react";
 import { CiCalendar } from "react-icons/ci";
 
-const Ticket = ({ ticket }) => {
+const Ticket = ({ ticket, handleLifting }) => {
   const { id, title, customer, description, priority, status, createdAt } =
     ticket;
   const handlePriority = (priority) => {
@@ -16,14 +16,24 @@ const Ticket = ({ ticket }) => {
 
   return (
     <div className="">
-      <div className="bg-white cursor-pointer hover:-translate-y-1 transition-all duration-300 hover:shadow-xl p-4 rounded-xl">
+      <div
+        onClick={() => handleLifting(ticket)}
+        className="bg-white cursor-pointer hover:-translate-y-1 transition-all duration-300 hover:shadow-xl p-4 rounded-xl"
+      >
         {/* Title, Status */}
         <div className="flex justify-between items-center">
           <h1 className=" md:text-xl font-bold md:font-semibold">{title}</h1>
 
           <div className="flex bg-[#B9F8CF] py-1 px-3 rounded-2xl items-center gap-1">
-            <p className="w-4 h-4 bg-[#02A53B] rounded-full"></p>
-            <p className="font-semibold">{status}</p>
+            {/* status === 'Open' ? 'bg-[#02A53B]' : status === 'In-Progress' ? 'bg-[#FEBB0C]' : 'bg-teal-500' */}
+            <p
+              className={`w-4 h-4 bg-[#02A53B] rounded-full ${status === "Open" ? "bg-[#02A53B]" : status === "In-Progress" ? "bg-[#FEBB0C]" : "bg-teal-500"}`}
+            ></p>
+            <p
+              className={`${status === "Open" ? "bg-[#B9F8CF]" : status === "In-Progress" ? "bg-[#F8F3B9]" : "bg-teal-100"}`}
+            >
+              {status}
+            </p>
           </div>
         </div>
         {/* Description */}
