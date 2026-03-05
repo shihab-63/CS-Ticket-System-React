@@ -45,6 +45,12 @@ const TicketDashboard = ({ ticketsPromise }) => {
 
     const remaining = cardItems.filter((item) => item.id !== clickedCard.id);
     setCardItems(remaining);
+    toast.success("Added Resolved Task");
+
+    const remainingTickes = ticketsData.filter(
+      (filterTicket) => filterTicket.id !== clickedCard.id,
+    );
+    setTicketsData(remainingTickes);
   };
 
   return (

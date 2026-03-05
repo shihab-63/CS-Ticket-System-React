@@ -4,7 +4,7 @@ const TaskStatus = ({ status, handleResolved }) => {
   return (
     <>
       <div className="bg-gray-200 border-gray-400/10 border border-dashed  mt-12 p-3 rounded-2xl">
-        <h1 className="text-2xl font-semibold">Task Status</h1>
+        <h1 className="text-2xl text-center font-semibold">Task Status</h1>
 
         {status.length === 0 ? (
           <div className="text-center mt-3 p-5">
